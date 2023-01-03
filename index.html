@@ -19,16 +19,22 @@
       // NaN
       //   property if global object
 
-      var myPhoneNumber = 9876543210;
-      var myName = "Anish Pokharel";
-      console.log(isNaN(myPhoneNumber));
-      console.log(isNaN(myName));
+      // var myPhoneNumber = 9876543210;
+      // var myName = "Anish Pokharel";
+      // console.log(isNaN(myPhoneNumber));
+      // console.log(isNaN(myName));
 
-      if (isNaN(myName)) {
-        console.log("please enter a valid number");
-        confirm("please enter a valid number");
-        alert("please enter a valid number");
-      }
+      // if (isNaN(myName)) {
+      //   console.log("please enter a valid number");
+      //   confirm("please enter a valid number");
+      //   alert("please enter a valid number");
+      // }
+      NaN === NaN;
+      Number.NaN === NaN;
+      isNaN(NaN);
+      isNaN(Number.NaN);
+      Number.isNaN(NaN);
+      console.log(Number.NaN === NaN);
     </script>
   </body>
 </html>
