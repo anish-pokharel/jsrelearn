@@ -7,16 +7,22 @@
     <title>Document</title>
     <style>
       .parentDiv {
-        color: black;
-        border: 10px solid;
-        width: 40%;
-        height: 40rem;
+        height: 300px;
+        width: 400px;
+        border: 2px solid;
+        background-color: #1dd1a1;
+        border: 10px solid #10ac84;
+        box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
       }
       .childDiv {
-        color: red;
-        border: 5px solid red;
-        height: 20rem;
-        width: 20%;
+        height: 200px;
+        width: 300px;
+        border: 2px solid;
+        background-color: #1dd1a1;
+        border: 10px solid #10ac84;
+        box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
       }
     </style>
   </head>
@@ -91,6 +97,9 @@
         alert("Child DIV CALL");
         console.log("child call");
       };
+
+      parentId.addEventListener("click", parentCall);
+      childId.addEventListener("click", childCall);
     </script>
   </body>
 </html>
