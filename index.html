@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="parentDiv" id="parentId">
-      <div class="childDiv" id="childDiv">hello</div>
+      <div class="childDiv" id="childId">hello</div>
     </div>
     <script>
       //   var iAmUseless = null;
@@ -86,20 +86,22 @@
       // bubble phasebottom to top 3
       // target phase 2
       // capturing phsase top to button 1
+      // BY DEFAULT  bubble propagation
 
       const parentId = document.getElementById("parentId");
       const childId = document.getElementById("childId");
       const parentCall = () => {
         alert("PARENT DIV CALL");
-        console.log("parent call");
+        // console.log("parent call");
       };
       const childCall = () => {
         alert("Child DIV CALL");
-        console.log("child call");
+        event.stopPropagation();
+        // console.log("child call");
       };
 
-      parentId.addEventListener("click", parentCall);
-      childId.addEventListener("click", childCall);
+      parentId.addEventListener("click", parentCall, true);
+      childId.addEventListener("click", childCall, true);
     </script>
   </body>
 </html>
