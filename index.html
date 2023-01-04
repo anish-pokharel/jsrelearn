@@ -125,9 +125,27 @@
       // async js
       // Hosting
 
-      console.log(myName);
-      var myName;
-      myName = "anish Pokharel";
+      // var myName;
+      // console.log(myName);
+      // myName = "anish Pokharel";
+
+      // scopechain
+
+      // const PI = 3.142;
+      // alert(PI);
+
+      // lexial scoping child to parent function
+
+      let a = "Hello anish"; //globl scope
+      const first = () => {
+        let b = " how are you ?";
+        const second = () => {
+          let c = "Hi i am fine  thank you";
+          console.log(a + b + c);
+        };
+        second();
+      };
+      first();
     </script>
   </body>
 </html>
