@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .parentDiv {
+      /* .parentDiv {
         height: 300px;
         width: 400px;
         border: 2px solid;
@@ -23,13 +23,13 @@
         border: 10px solid #10ac84;
         box-shadow: 0 10px 13px -10px rgba(0, 0, 0, 0.4);
         cursor: pointer;
-      }
+      } */
     </style>
   </head>
   <body>
-    <div class="parentDiv" id="parentId">
+    <!-- <div class="parentDiv" id="parentId">
       <div class="childDiv" id="childId">hello</div>
-    </div>
+    </div> -->
     <script>
       //   var iAmUseless = null;
       //   console.log(iAmUseless);
@@ -88,20 +88,37 @@
       // capturing phsase top to button 1
       // BY DEFAULT  bubble propagation
 
-      const parentId = document.getElementById("parentId");
-      const childId = document.getElementById("childId");
-      const parentCall = () => {
-        alert("PARENT DIV CALL");
-        // console.log("parent call");
+      // const parentId = document.getElementById("parentId");
+      // const childId = document.getElementById("childId");
+      // const parentCall = () => {
+      //   alert("PARENT DIV CALL");
+      //   // console.log("parent call");
+      // };
+      // const childCall = () => {
+      //   alert("Child DIV CALL");
+      //   event.stopPropagation();
+      //   // console.log("child call");
+      // };
+
+      // parentId.addEventListener("click", parentCall, true);
+      // childId.addEventListener("click", childCall, true);
+      const add = (a, b) => {
+        return a + b;
       };
-      const childCall = () => {
-        alert("Child DIV CALL");
-        event.stopPropagation();
-        // console.log("child call");
+      const sub = (a, b) => {
+        return a - b;
+      };
+      const mul = (a, b) => {
+        return a * b;
       };
 
-      parentId.addEventListener("click", parentCall, true);
-      childId.addEventListener("click", childCall, true);
+      const calculator = (num1, num2, operator) => {
+        return operator(num1, num2);
+        // return add(5, 2);
+      };
+      // calculator(5, 4, sub);
+      console.log(calculator(5, 4, sub));
+      // alert(calculator(5, 4, add));
     </script>
   </body>
 </html>
