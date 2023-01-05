@@ -159,7 +159,7 @@
       // };
       // outerFun(5);
 
-      closures;
+      // closures;
       const outerFun = (a) => {
         let b = 10;
         const innerFun = () => {
@@ -169,7 +169,9 @@
         };
         return innerFun;
       };
-      outerFun(5);
+      let checkClousure = outerFun(5);
+      // checkClousure();
+      console.dir(checkClousure);
     </script>
   </body>
 </html>
