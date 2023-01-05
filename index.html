@@ -173,9 +173,20 @@
       // checkClousure();
       // console.dir(checkClousure);
 
-      "use strict";
-      x = "anish";
-      console.log(x);
+      // "use strict";
+      // x = "anish";
+      // console.log(x);
+
+      // async and sync js
+      // sync;
+      const fun2 = () => {
+        console.log(`function 2 is called `);
+      };
+      const fun1 = () => {
+        console.log(`function 1 is called`);
+        fun2();
+        console.log(`function  1 is called again`);
+      };
     </script>
   </body>
 </html>
