@@ -179,14 +179,28 @@
 
       // async and sync js
       // sync;
+      // const fun2 = () => {
+      //   console.log(`function 2 is called `);
+      // };
+      // const fun1 = () => {
+      //   console.log(`function 1 is called`);
+      //   fun2();
+      //   console.log(`function  1 is called again`);
+      // };
+      // fun1();
+
+      // async
       const fun2 = () => {
-        console.log(`function 2 is called `);
+        setTimeout(() => {
+          console.log(`Function 2 is called`);
+        }, 2000);
       };
       const fun1 = () => {
         console.log(`function 1 is called`);
         fun2();
-        console.log(`function  1 is called again`);
+        console.log(`Function1 is called again`);
       };
+      fun1();
     </script>
   </body>
 </html>
