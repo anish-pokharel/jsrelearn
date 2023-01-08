@@ -7,7 +7,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <div id="card">
+        <article class="card">
+          <div class="card-body">
+            <img src="${data.flag}" alt="" class="card-body-img" />
+            <h1 class="card-body-title"></h1>
+          </div>
+        </article>
+      </div>
+    </div>
 
     <script>
       const container = document.querySelector("#container");
@@ -20,7 +29,10 @@
         // console.log = this.responseText;
         const [data] = JSON.parse(this.responseText);
         console.log(data.capital);
-        const htmlData = ``;
+
+        const htmlData = `
+        
+        `;
       });
     </script>
   </body>
