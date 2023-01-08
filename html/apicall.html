@@ -7,6 +7,7 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="container"></div>
     <!-- <div id="container">
       <div id="card">
         <article class="card">
@@ -36,7 +37,7 @@
     <script>
       const container = document.querySelector("#container");
       const request = new XMLHttpRequest();
-      request.open("GET", "https://restcountries.com/v3.1/name/nepal");
+      request.open("GET", "https://restcountries.com/v3.1/name/Nepal");
       request.send();
 
       //   to get response
@@ -46,17 +47,16 @@
         console.log(data.capital);
 
         const htmlData = `
-        <div id="container">
       <div id="card">
         <article class="card">
           <div class="card-body">
-            <img src="${data.flag}" alt="" class="card-body-img" />
-            <h1 class="card-body-title">${data.name}<span></span></h1>
+            <img src="${data.flags.png}" alt="" class="card-body-img" />
+            <h1 class="card-body-title">${data.name.common}<span></span></h1>
             <p class="card-body-text">${data.capital}<span></span></p>
           </div>
           <div class="card-footer">
             <div class="card-footer-social">
-              <h3>${data.nativeName}</h3>
+              <h3>${data.name.nativeName.nep.common}</h3>
               <p>Native language</p>
             </div>
             <div class="card-footer-social">
@@ -64,15 +64,15 @@
               <p>Population</p>
             </div>
             <div class="card-footer-social">
-              <h3>${data.demonym}</h3>
+              <h3>${data.demonyms.eng.f}</h3>
               <p>Denonym</p>
             </div>
           </div>
         </article>
       </div>
-    </div>
-        
         `;
+        // container.insertAdjacentHTML("afterbegin", htmlData);
+        container.insertAdjacentHTML("beforeend", htmlData);
       });
     </script>
   </body>
