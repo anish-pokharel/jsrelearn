@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="container">
+    <!-- <div id="container">
       <div id="card">
         <article class="card">
           <div class="card-body">
@@ -20,10 +20,18 @@
               <h3>${data.nativeName}</h3>
               <p>Native language</p>
             </div>
+            <div class="card-footer-social">
+              <h3>${data.population}</h3>
+              <p>Population</p>
+            </div>
+            <div class="card-footer-social">
+              <h3>${data.demonym}</h3>
+              <p>Denonym</p>
+            </div>
           </div>
         </article>
       </div>
-    </div>
+    </div> -->
 
     <script>
       const container = document.querySelector("#container");
@@ -38,6 +46,31 @@
         console.log(data.capital);
 
         const htmlData = `
+        <div id="container">
+      <div id="card">
+        <article class="card">
+          <div class="card-body">
+            <img src="${data.flag}" alt="" class="card-body-img" />
+            <h1 class="card-body-title">${data.name}<span></span></h1>
+            <p class="card-body-text">${data.capital}<span></span></p>
+          </div>
+          <div class="card-footer">
+            <div class="card-footer-social">
+              <h3>${data.nativeName}</h3>
+              <p>Native language</p>
+            </div>
+            <div class="card-footer-social">
+              <h3>${data.population}</h3>
+              <p>Population</p>
+            </div>
+            <div class="card-footer-social">
+              <h3>${data.demonym}</h3>
+              <p>Denonym</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
         
         `;
       });
