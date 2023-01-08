@@ -215,8 +215,29 @@
       // }
       // sum(5)(3)(8)(7);
       // console.log(sum);
-      const sum = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
-      sum(5)(3)(8);
+      // const sum = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
+      // sum(5)(3)(8);
+
+      // call back hell
+
+      setTimeout(() => {
+        console.log(`1work is done`);
+        setTimeout(() => {
+          console.log(`2work is done`);
+          setTimeout(() => {
+            console.log(`3work is done`);
+            setTimeout(() => {
+              console.log(`4work is done`);
+              setTimeout(() => {
+                console.log(`5work is done`);
+                setTimeout(() => {
+                  console.log(`6work is done`);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
     </script>
   </body>
 </html>
