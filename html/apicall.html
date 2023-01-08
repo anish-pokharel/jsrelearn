@@ -14,6 +14,12 @@
       const request = new XMLHttpRequest();
       request.open("GET", "https://restcountries.com/v3.1/name/nepal");
       request.send();
+
+      //   to get response
+      request.addEventListener("load", function () {
+        //    const data= this.responseText;
+        console.log = this.responseText;
+      });
     </script>
   </body>
 </html>
