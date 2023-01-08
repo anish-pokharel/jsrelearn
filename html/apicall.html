@@ -8,5 +8,12 @@
   </head>
   <body>
     <div id="container"></div>
+
+    <script>
+      const container = document.querySelector("#container");
+      const request = new XMLHttpRequest();
+      request.open("GET", "https://restcountries.com/v3.1/name/nepal");
+      request.send();
+    </script>
   </body>
 </html>
