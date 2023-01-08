@@ -17,8 +17,9 @@
 
       //   to get response
       request.addEventListener("load", function () {
-        //    const data= this.responseText;
-        console.log = this.responseText;
+        // console.log = this.responseText;
+        const [data] = JSON.parse(this.responseText);
+        console.log(data.capital);
       });
     </script>
   </body>
