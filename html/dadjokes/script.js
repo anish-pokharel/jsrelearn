@@ -11,4 +11,17 @@
 // async;
 
 const jokes = document.querySelector(`jokes`);
-const jokeBtn = document.querySelector(`#jokebtn`);
+const jokeBtn = document.querySelector(`#jokeBtn`);
+
+const generateJokes = () => {
+  fetch(`https://icanhazdadjoke.com`)
+    .then((res) => {
+      console.log(res.json());
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
+jokeBtn.addEventListener("click", generateJokes);
+generateJokes();
