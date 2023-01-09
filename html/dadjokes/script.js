@@ -10,13 +10,19 @@
 // GET https://icanhazdadjoke.com/
 // async;
 
-const jokes = document.querySelector(`jokes`);
+const jokes = document.querySelector("joke");
 const jokeBtn = document.querySelector(`#jokeBtn`);
 
 const generateJokes = () => {
-  fetch(`https://icanhazdadjoke.com`)
-    .then((res) => {
-      console.log(res.json());
+  const setHeader = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  fetch(`https://icanhazdadjoke.com`, setHeader)
+    .then((res) => res.json())
+    .then((data) => {
+      joke.innerHTML = data.joke;
     })
     .catch((error) => {
       console.log(error);
