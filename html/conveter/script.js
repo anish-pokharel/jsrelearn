@@ -18,9 +18,13 @@ const calculateTemp = () => {
 
   if (valueTemp == "cel") {
     result = celToFah(numberTemp);
-    document.getElementById("resultContainer").innerHtml = `=&{result}F`;
+    document.getElementById(
+      "resultContainer"
+    ).innerHTML = `= ${result}°Fahrenheit`;
   } else {
     result = FahToCel(numberTemp);
-    document.getElementById("resultContainer").innerHtml = `&={result}C`;
+    document.getElementById(
+      "resultContainer"
+    ).innerHTML = `= ${result}°Celsius`;
   }
 };
