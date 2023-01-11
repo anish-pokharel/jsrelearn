@@ -10,7 +10,13 @@ const calculateTemp = () => {
     return fahrenheit;
   };
   const FahToCel = (fehr) => {
-    let fahrenheit = Math.round((cel * 9) / 5 + 32);
-    return fahrenheit;
+    let celsius = Math.round((fehr * 9) / 5 - 32);
+    return celsius;
   };
+
+  let result;
+
+  if (valueTemp == "cel") {
+    result = celToFah(numberTemp);
+  }
 };
