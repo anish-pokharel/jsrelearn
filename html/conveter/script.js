@@ -18,5 +18,9 @@ const calculateTemp = () => {
 
   if (valueTemp == "cel") {
     result = celToFah(numberTemp);
+    document.getElementById("resultContainer").innerHtml = `=&{result}F`;
+  } else {
+    result = FahToCel(numberTemp);
+    document.getElementById("resultContainer").innerHtml = `&={result}C`;
   }
 };
