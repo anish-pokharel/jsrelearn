@@ -1,5 +1,11 @@
-const counter = document.querySelectorAll(".counter");
+const counters = document.querySelectorAll(".counter");
 
-CountQueuingStrategy.forEach((counter) => {
-  console.log(counter);
+counters.forEach((counter) => {
+  //   console.log(counter);
+
+  counter.innerHTML = 0;
+  const updateCounter = () => {
+    const targetCounter = counters.getAttribute("data-target");
+  };
+  updateCounter();
 });
