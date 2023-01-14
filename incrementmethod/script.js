@@ -6,7 +6,7 @@ counters.forEach((counter) => {
   counter.innerHTML = 0;
   const updateCounter = () => {
     const targetCounter = counters.getAttribute("data-target");
+    console.log(targetCounter);
   };
   updateCounter();
-  15:13:57;
 });
