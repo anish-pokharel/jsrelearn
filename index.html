@@ -79,142 +79,142 @@
       // var num = 15;
       // var newNum = num++;
       // var newNum = ++num;
-      // console.log(num);
-      // console.log(newNum);
+      console.log(num);
+      console.log(newNum);
 
-      // event propagation
-      // bubble phasebottom to top 3
-      // target phase 2
-      // capturing phsase top to button 1
-      // BY DEFAULT  bubble propagation
+      event propagation
+      bubble phasebottom to top 3
+      target phase 2
+      capturing phsase top to button 1
+      BY DEFAULT  bubble propagation
 
-      // const parentId = document.getElementById("parentId");
-      // const childId = document.getElementById("childId");
-      // const parentCall = () => {
-      //   alert("PARENT DIV CALL");
-      //   // console.log("parent call");
-      // };
-      // const childCall = () => {
-      //   alert("Child DIV CALL");
-      //   event.stopPropagation();
-      //   // console.log("child call");
-      // };
+      const parentId = document.getElementById("parentId");
+      const childId = document.getElementById("childId");
+      const parentCall = () => {
+        alert("PARENT DIV CALL");
+        // console.log("parent call");
+      };
+      const childCall = () => {
+        alert("Child DIV CALL");
+        event.stopPropagation();
+        // console.log("child call");
+      };
 
-      // parentId.addEventListener("click", parentCall, true);
-      // childId.addEventListener("click", childCall, true);
-      // const add = (a, b) => {
-      //   return a + b;
-      // };
-      // const sub = (a, b) => {
-      //   return a - b;
-      // };
-      // const mul = (a, b) => {
-      //   return a * b;
-      // };
+      parentId.addEventListener("click", parentCall, true);
+      childId.addEventListener("click", childCall, true);
+      const add = (a, b) => {
+        return a + b;
+      };
+      const sub = (a, b) => {
+        return a - b;
+      };
+      const mul = (a, b) => {
+        return a * b;
+      };
 
-      // const calculator = (num1, num2, operator) => {
-      //   return operator(num1, num2);
-      // return add(5, 2);
-      // };
-      // calculator(5, 4, sub);
-      // console.log(calculator);
-      // console.log(calculator(5, 4, sub));
-      // alert(calculator(5, 4, add));
-      // Difference between higher order and call back function`
+      const calculator = (num1, num2, operator) => {
+        return operator(num1, num2);
+      return add(5, 2);
+      };
+      calculator(5, 4, sub);
+      console.log(calculator);
+      console.log(calculator(5, 4, sub));
+      alert(calculator(5, 4, add));
+      Difference between higher order and call back function`
 
-      // async js
-      // Hosting
+      async js
+      Hosting
 
-      // var myName;
-      // console.log(myName);
-      // myName = "anish Pokharel";
+      var myName;
+      console.log(myName);
+      myName = "anish Pokharel";
 
-      // scopechain
+      scopechain
 
-      // const PI = 3.142;
-      // alert(PI);
+      const PI = 3.142;
+      alert(PI);
 
-      // lexial scoping child to parent function
+      lexial scoping child to parent function
 
-      // let a = "Hello anish"; //globl scope
-      // const first = () => {
-      //   let b = " how are you ?";
-      //   const second = () => {
-      //     let c = "Hi i am fine  thank you";
-      //     console.log(a + b + c);
-      //   };
-      //   second();
-      // };
-      // first();
+      let a = "Hello anish"; //globl scope
+      const first = () => {
+        let b = " how are you ?";
+        const second = () => {
+          let c = "Hi i am fine  thank you";
+          console.log(a + b + c);
+        };
+        second();
+      };
+      first();
 
-      // closures
-      // const outerFun = (a) => {
-      //   let b = 10;
-      //   const innerFun = () => {
-      //     let sum = a + b;
-      //     console.log(`the sum of the two no is ${sum}`);
-      //     // alert(`the sum of the two no is ${sum}`);
-      //   };
-      //   innerFun();
-      // };
-      // outerFun(5);
+      closures
+      const outerFun = (a) => {
+        let b = 10;
+        const innerFun = () => {
+          let sum = a + b;
+          console.log(`the sum of the two no is ${sum}`);
+          // alert(`the sum of the two no is ${sum}`);
+        };
+        innerFun();
+      };
+      outerFun(5);
 
-      // closures;
-      // const outerFun = (a) => {
-      //   let b = 10;
-      //   const innerFun = () => {
-      //     let sum = a + b;
-      //     console.log(`the sum of the two no is ${sum}`);
-      //     // alert(`the sum of the two no is ${sum}`);
-      //   };
-      //   return innerFun;
-      // };
-      // let checkClousure = outerFun(5);
-      // checkClousure();
-      // console.dir(checkClousure);
+      closures;
+      const outerFun = (a) => {
+        let b = 10;
+        const innerFun = () => {
+          let sum = a + b;
+          console.log(`the sum of the two no is ${sum}`);
+          // alert(`the sum of the two no is ${sum}`);
+        };
+        return innerFun;
+      };
+      let checkClousure = outerFun(5);
+      checkClousure();
+      console.dir(checkClousure);
 
-      // "use strict";
-      // x = "anish";
-      // console.log(x);
+      "use strict";
+      x = "anish";
+      console.log(x);
 
-      // async and sync js
-      // sync;
-      // const fun2 = () => {
-      //   console.log(`function 2 is called `);
-      // };
-      // const fun1 = () => {
-      //   console.log(`function 1 is called`);
-      //   fun2();
-      //   console.log(`function  1 is called again`);
-      // };
-      // fun1();
+      async and sync js
+      sync;
+      const fun2 = () => {
+        console.log(`function 2 is called `);
+      };
+      const fun1 = () => {
+        console.log(`function 1 is called`);
+        fun2();
+        console.log(`function  1 is called again`);
+      };
+      fun1();
 
-      // async
-      // const fun2 = () => {
-      //   setTimeout(() => {
-      //     console.log(`Function 2 is called`);
-      //   }, 2000);
-      // };
-      // const fun1 = () => {
-      //   console.log(`function 1 is called`);
-      //   fun2();
-      //   console.log(`Function1 is called again`);
-      // };
-      // fun1();
-      // function currying
-      // function sum(num1) {
-      //   return function (num2) {
-      //     console.log(num1 + num2);
-      //     return function (num3) {
-      //       console.log(num1 + num2 + num3);
-      //       return function (num4) {
-      //         console.log(num1 + num2 + num3 + num4);
-      //       };
-      //     };
-      //   };
-      // }
-      // sum(5)(3)(8)(7);
-      // console.log(sum);
+      async
+      const fun2 = () => {
+        setTimeout(() => {
+          console.log(`Function 2 is called`);
+        }, 2000);
+      };
+      const fun1 = () => {
+        console.log(`function 1 is called`);
+        fun2();
+        console.log(`Function1 is called again`);
+      };
+      fun1();
+      function currying
+      function sum(num1) {
+        return function (num2) {
+          console.log(num1 + num2);
+          return function (num3) {
+            console.log(num1 + num2 + num3);
+            return function (num4) {
+              console.log(num1 + num2 + num3 + num4);
+            };
+          };
+        };
+      }
+      sum(5)(3)(8)(7);
+      console.log(sum);
       // const sum = (num1) => (num2) => (num3) => console.log(num1 + num2 + num3);
       // sum(5)(3)(8);
 
